@@ -76,7 +76,7 @@ Nesse primeira fase vamos criar a inteligência artificial e configurá-la para 
     * **Tags:** Adicione `Name: purpose` e `Value: automatizar-causa-raiz`.
     * Clique em **Review + create** e depois em **Create**.
 
-    ![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/d9334f5c0d7ef230a68754f5185d993f499ee834/01_Create_a_Resource_Group.png)
+![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/d9334f5c0d7ef230a68754f5185d993f499ee834/01_Create_a_Resource_Group.png)
 
     
 3.  **Criar o Azure OpenAI:**
