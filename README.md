@@ -194,7 +194,7 @@ Esta fase configura o fluxo que utiliza o método **HTTP** para comunicar com a 
         }
         ```
 
-     ![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/1c36cd18fe26c24b2ab0b866da3763c51153b30b/08_Sample_JSON_payload.png)
+     ![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/99f4e0a9e1d406b4e35761185ae829209af5ac27/08_Sample_JSON_Payload.png)
       
 6.  **Passo C: Enviar o E-mail:**
     * Clique em **+ New Step**. Busque por **"Outlook"** ou **"Gmail"** e selecione **"Send an email (V2)"**.
