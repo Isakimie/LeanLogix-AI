@@ -60,7 +60,7 @@ Com isso, o valor do projeto foi maximizado no **Processamento de Dados de Alto 
 4.  **Tratamento (Parse JSON):** O Logic App interpreta a resposta da IA.
 5.  **Output (E-mail):** Envio automático do relatório formatado para o gestor da área.
 
- ![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/8ab41ff58c7ecc669efcb20b5d0dec2b79986736/Arquitetura_do_Fluxo.png)
+  ![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/8ab41ff58c7ecc669efcb20b5d0dec2b79986736/Arquitetura_do_Fluxo.png)
 
 ## ▶️ Guia de Implementação (Passo a Passo Detalhado)
 
@@ -76,7 +76,7 @@ Nesse primeira fase vamos criar a inteligência artificial e configurá-la para 
     * **Tags:** Adicione `Name: purpose` e `Value: automatizar-causa-raiz`.
     * Clique em **Review + create** e depois em **Create**.
 
-![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/d9334f5c0d7ef230a68754f5185d993f499ee834/01_Create_a_Resource_Group.png)
+   ![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/802cff98995992631d0c4c22eae0e6fc3fb0f5a5/01_Create_a_Resource_Group.png)
 
     
 3.  **Criar o Azure OpenAI:**
@@ -93,7 +93,7 @@ Nesse primeira fase vamos criar a inteligência artificial e configurá-la para 
    
    * Clique em **Create budget** (é importante limitar budget, caso tenha criado um conta gratuita e recebeu $200 em créditos, assim pode receber alertas de gastos)
       
-   ![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/4f6fe8bf7c079d14e91b4452c79a931bd1c22fcf/03_Create_Budget.png)
+   ![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/802cff98995992631d0c4c22eae0e6fc3fb0f5a5/03_Create_Budget.png)
 
 
 3.  **Pegar Chaves (Endpoint e API Key):**
@@ -111,7 +111,7 @@ Nesse primeira fase vamos criar a inteligência artificial e configurá-la para 
     * **Tokens per Minute Rate Limit:** `100k`
     * Clique em **Create**.
 
-![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/fd810492ee39e00daaec7d7b4160b249d332baed/04_Deploy_gpt-4.1mini.png)
+  ![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/802cff98995992631d0c4c22eae0e6fc3fb0f5a5/04_Deploy_gpt-4.1mini.png)
 
 ---
 
@@ -129,7 +129,7 @@ Esta fase configura o fluxo que utiliza o método **HTTP** para comunicar com a 
     * Clique em **Review + create** e depois em **Create**.
     * Quando terminar, clique em **Go to resource**.
 
-  ![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/6ff2baca5fac9d5fe5054466c14fe780c688620f/05_Create_Logic_App.png)
+   ![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/6ff2baca5fac9d5fe5054466c14fe780c688620f/05_Create_Logic_App.png)
       
 2.  **Passo A: O Gatilho (Trigger):**
     * Ao abrir o Logic App, selecione **"When a HTTP request is received"**.
@@ -144,7 +144,7 @@ Esta fase configura o fluxo que utiliza o método **HTTP** para comunicar com a 
             }
         }
         ```
-    ![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/96e9304d1d7a5e795ae84233957e63583ccfa4f6/06_Logic_App_Designer_HTTP.png)
+    ![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/5fc1aaa70eb78f9320377f1f4a8d958c2b11fbf8/06_Logic_App_Designer_HTTP.png)
     
 4.  **Passo B: Conectar a IA (Ação HTTP):**
     * Clique em **+ New Step**. Na aba **Built-in**, selecione **HTTP**.
@@ -175,8 +175,8 @@ Esta fase configura o fluxo que utiliza o método **HTTP** para comunicar com a 
         "temperature": 0.7
         }
         ```
-        
- ![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/e37fa84bd9ce6772d5290aabd0573fe8b2fcef94/07_Logic_App_Designer_HTTP.png)
+
+     ![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/e37fa84bd9ce6772d5290aabd0573fe8b2fcef94/07_Logic_App_Designer_HTTP.png)
         
 5.  **Limpeza de Dados antes de enviar o e-mail (Parse JSON):**
     * Clique em **+ New Step**. Na aba **Built-in**, selecione **Parse JSON**.
@@ -194,7 +194,7 @@ Esta fase configura o fluxo que utiliza o método **HTTP** para comunicar com a 
         }
         ```
 
-         ![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/1c36cd18fe26c24b2ab0b866da3763c51153b30b/08_Sample_JSON_payload.png)
+     ![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/1c36cd18fe26c24b2ab0b866da3763c51153b30b/08_Sample_JSON_payload.png)
       
 6.  **Passo C: Enviar o E-mail:**
     * Clique em **+ New Step**. Busque por **"Outlook"** ou **"Gmail"** e selecione **"Send an email (V2)"**.
@@ -206,7 +206,7 @@ Esta fase configura o fluxo que utiliza o método **HTTP** para comunicar com a 
     * Na janelinha flutuante dinâmica, procure a seção do "Body content” no Parse JSON.`
     * Clique em **Save**.
 
-![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/4bcb52f62c69c9291199019ce933e45ac9903e13/09_Send_an_Email.png)
+    ![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/4bcb52f62c69c9291199019ce933e45ac9903e13/09_Send_an_Email.png)
 
 ---
 
@@ -221,17 +221,17 @@ Esta fase configura o fluxo que utiliza o método **HTTP** para comunicar com a 
     ```
 3.  Clique em **Run** e verifique seu e-mail para o relatório de RNC gerado pela IA.
 
-![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/cf5fd2cab81017d7c6d500554864262c2b81f581/10_Run_with_Payload.png)
+    ![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/cf5fd2cab81017d7c6d500554864262c2b81f581/10_Run_with_Payload.png)
 
 ## 📸 Evidências de Funcionamento
 
 ### 1. O Fluxo no Logic Apps
 
-![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/3f810e56bdbd99544d40b6db35ba0c2fa4a0a86a/11_Fluxo_com_%20'checks-verdes'.png)
+   ![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/5fc1aaa70eb78f9320377f1f4a8d958c2b11fbf8/11_Fluxo_com_%20'checks-verdes'.png)
 
 ### 2. Exemplo de Saída (E-mail Recebido)
 
-![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/1cf63fc23c39c17a7c423561263500d02293ff11/12_Email_Recebido.png)
+   ![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/1cf63fc23c39c17a7c423561263500d02293ff11/12_Email_Recebido.png)
 
 ## 🚀 Próximos Passos (Melhorias Futuras)
 
