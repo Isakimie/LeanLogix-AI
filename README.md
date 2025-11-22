@@ -227,7 +227,7 @@ Esta fase configura o fluxo que utiliza o método **HTTP** para comunicar com a 
 
 ### 1. O Fluxo no Logic Apps
 
-![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/b132266a05340b48b7f0b16cbf5b8d67cbe30375/11_Fluxo_com_%20'checks-verdes'.png)
+![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/3f810e56bdbd99544d40b6db35ba0c2fa4a0a86a/11_Fluxo_com_%20'checks-verdes'.png)
 
 ### 2. Exemplo de Saída (E-mail Recebido)
 
