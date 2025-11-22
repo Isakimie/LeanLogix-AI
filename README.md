@@ -129,7 +129,7 @@ Esta fase configura o fluxo que utiliza o método **HTTP** para comunicar com a 
     * Clique em **Review + create** e depois em **Create**.
     * Quando terminar, clique em **Go to resource**.
 
-   ![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/6ff2baca5fac9d5fe5054466c14fe780c688620f/05_Create_Logic_App.png)
+   ![image alt](https://github.com/Isakimie/LeanLogix-AI/blob/0b07f98427211a7ee0b256b7513167e1bfbf9ac2/05_Create_Logic_App.png)
       
 2.  **Passo A: O Gatilho (Trigger):**
     * Ao abrir o Logic App, selecione **"When a HTTP request is received"**.
